@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head lang="en">
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1 user-scalable=no" />
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="topSection">
+        <div class="level"><span>Level 10</span></div>
+        <div class="lesson"><span>Lesson 10</span></div>
+        <div class="wonders"><img src="images/wonders.png"/></div>
+    </div>
+
+    <div class="titleSection clear">
+        <div class="title"><span>Take a new step</span></div>
+        <div class="figure"><img src="images/figure.png"/></div>
+    </div>
+
+    <div class="textbook clear"><img src="images/textbook1.jpg"/></div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/fittext.js"></script>
+    <script type="text/javascript">
+
+        $(".topSection .level").height($(".wonders>img").height());
+        $(".topSection .lesson").height($(".wonders>img").height());
+        $(".topSection .wonders").height($(".wonders>img").height());
+        $(".titleSection .figure").height($(".titleSection .figure>img").height());
+
+        $(window).resize(function(event) {
+            $(".topSection .level").height($(".wonders>img").height());
+            $(".topSection .lesson").height($(".wonders>img").height());
+            $(".topSection .wonders").height($(".wonders>img").height());
+            $(".titleSection .figure").height($(".titleSection .figure>img").height());
+        });
+
+        fitText($(".topSection .level>span"),0.5);
+        fitText($(".topSection .lesson>span"),0.55);
+        fitText($(".titleSection .title"),1);
+    </script>
+</body>
+</html>
+
+
